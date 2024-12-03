@@ -13,6 +13,10 @@
             <ShellContent Title="Recarga" ContentTemplate="{DataTemplate local:RecargaPageSL}" />
         </Tab>
 
+        <Tab Title="Nombres" Icon="icon_personas.png">
+            <ShellContent Title="Nombres" ContentTemplate="{DataTemplate local:NombresPageSL}" />
+        </Tab>
+
     </TabBar>
 
 </Shell>

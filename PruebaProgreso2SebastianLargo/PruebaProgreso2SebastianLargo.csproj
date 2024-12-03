@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\icon_personas.png" />
 	  <None Remove="Resources\Images\icon_recarga.png" />
 	</ItemGroup>
 
@@ -67,6 +68,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="SLViews\NombresPageSL.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="SLViews\RecargaPageSL.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
