@@ -7,9 +7,12 @@
     Shell.FlyoutBehavior="Disabled"
     Title="PruebaProgreso2SebastianLargo">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+
+        <Tab Title="Recarga" Icon="recarga_icon.png">
+            <ShellContent Title="Recarga" ContentTemplate="{DataTemplate local:RecargaPageSL}" />
+        </Tab>
+
+    </TabBar>
 
 </Shell>
