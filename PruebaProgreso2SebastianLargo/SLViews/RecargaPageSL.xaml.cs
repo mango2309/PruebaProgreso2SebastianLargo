@@ -2,7 +2,7 @@ namespace PruebaProgreso2SebastianLargo.SLViews;
 
 public partial class RecargaPageSL : ContentPage
 {
-    private const string FileName = "SebastianLargo.txt";
+    private readonly string FilePath = Path.Combine(FileSystem.AppDataDirectory, "SebastianLargo.txt");
 
     public RecargaPageSL()
     {
@@ -22,32 +22,38 @@ public partial class RecargaPageSL : ContentPage
             return;
         }
 
+        // Crear una instancia del modelo Recarga
         var recarga = new SLModels.RecargaSL
         {
             Nombre = nombre,
             NumeroTelefono = numero
         };
 
-        File.WriteAllText(FileName, recarga.ToString());
+        // Guardar la información en el archivo
+        File.WriteAllText(FilePath, recarga.ToString());
 
+        // Mostrar mensaje de éxito
         SL_Label3.Text = "¡Recarga exitosa!";
         SL_Label3.TextColor = Colors.Green;
 
+        // Recargar la última recarga
         CargarUltimaRecarga();
 
+        // Limpiar formulario
         SL_Entry1.Text = string.Empty;
         SL_Entry2.Text = string.Empty;
     }
 
     private void CargarUltimaRecarga()
     {
-        if (File.Exists(FileName))
+        if (File.Exists(FilePath))
         {
-            SL_Label5.Text = File.ReadAllText(FileName);
+            SL_Label5.Text = File.ReadAllText(FilePath);
         }
         else
         {
             SL_Label5.Text = "No hay recargas registradas.";
         }
     }
+
 }
