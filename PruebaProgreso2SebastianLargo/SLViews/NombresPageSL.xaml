@@ -3,12 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PruebaProgreso2SebastianLargo.SLViews.NombresPageSL"
              Title="NombresPageSL">
-    <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *" Padding="20">
+    
+    <Grid RowDefinitions="*, *" ColumnDefinitions="*, *" Padding="0">
 
-        <Label Grid.Row="0" Grid.Column="0" Text="Sebastián" FontSize="24" HorizontalOptions="Center" />
-        <Label Grid.Row="0" Grid.Column="1" Text="Alejandro" FontSize="24" HorizontalOptions="Center" />
+        <Label Grid.Row="0" Grid.Column="0" Text="Sebastián" 
+               FontSize="24" HorizontalOptions="Fill" VerticalOptions="Fill" 
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+        <Label Grid.Row="0" Grid.Column="1" Text="Alejandro" 
+               FontSize="24" HorizontalOptions="Fill" VerticalOptions="Fill" 
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
 
-        <Label Grid.Row="1" Grid.Column="0" Text="Largo" FontSize="24" HorizontalOptions="Center" Style="{StaticResource ApellidoStyle}" />
-        <Label Grid.Row="1" Grid.Column="1" Text="Paredes" FontSize="24" HorizontalOptions="Center" Style="{StaticResource ApellidoStyle}" />
+        <Label Grid.Row="1" Grid.Column="0" Text="Largo" 
+               FontSize="24" HorizontalOptions="Fill" VerticalOptions="Fill" 
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+               Style="{StaticResource ApellidoStyle}" />
+        <Label Grid.Row="1" Grid.Column="1" Text="Paredes" 
+               FontSize="24" HorizontalOptions="Fill" VerticalOptions="Fill" 
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+               Style="{StaticResource ApellidoStyle}" />
     </Grid>
 </ContentPage>
